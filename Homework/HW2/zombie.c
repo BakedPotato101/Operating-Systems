@@ -1,7 +1,7 @@
 /*
 * Author: Jackson Baker
 * Date: 2/10/2025
-* Description: Zombie
+* Description: Zombie programs forks and the child remains a zombie for 10 seconds until parent finishes executing.
 */
 
 #include <stdio.h>
