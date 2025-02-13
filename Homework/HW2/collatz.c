@@ -1,7 +1,7 @@
 /*
  * Author: Jackson Baker
  * Date: 2/10/2025
- * Description: Collatz
+ * Description: This program takes a positive integer n as input and uses a child process to write into a shared memory space the calculations of the collatz algorithm. The parent then reads the shared memory space and prints to the standard out.
  */
 
 #include <fcntl.h>
@@ -57,13 +57,13 @@ int collatz(int n, char **ptr) {
 }
 
 int main(int argc, char *argv[]) {
-   if (argc != 2) {
+   if (argc != 2) { // Error: incorrect usage
       printf("Usage: %s <positive integer>\n", argv[0]);
       return 1;
    }
 
    int n = atoi(argv[1]);
-   if (n <= 0) {
+   if (n <= 0) { // Error: negative number.
       printf("n must be greater than zero.\n");
       return 1;
    }
